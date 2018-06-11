@@ -63,7 +63,6 @@ class Owner
 
   def sell_pets
     pets.each {|pet| pet.clear}
-
   end
 
 end
