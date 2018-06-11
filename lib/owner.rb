@@ -62,10 +62,15 @@ class Owner
   end
 
   def sell_pets
-    binding.pry
     pets.each {|animal, pets| pets.each {|pet| pet.mood = "nervous"}}
     pets.each_value {|pet| pet.clear}
+  end
 
+  def list_pets
+    number_of_fish = pets[:fish].count
+    number_of_cats = pets[:cats].count
+    number_of_dogs = pets[:dogs].count
+    "I have #{number_of_fish} fish, #{number_of_dogs}(s), and #{number_of_cats}(s)."
   end
 
 end
